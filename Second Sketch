@@ -1,0 +1,175 @@
+void setup(){
+    size (500,500);
+    
+    
+    // the sky
+    noStroke();
+    fill(79,148,205);
+    rect(0,0,500,100);
+    fill(0,191,255);
+    rect(0,25,500,100);
+    fill(152,245,255);
+    rect(0,50,500,100);
+    fill(187,255,255);
+    rect(0,75,500,100);
+    
+    // the grass
+    noStroke();
+    fill(124,252,0);
+    rect(0,100,500,100);
+    fill(118,238,0);
+    rect(0,150,500,100);
+    fill(0,238,0);
+    rect(0,200,500,100);
+    fill(50, 205, 50);
+    rect(0,250,500,100);
+    fill(34, 139, 34);
+    rect(0,300,500,100);
+    fill(0, 128, 0);
+    rect(0,350,500, 100);
+    fill(48, 128, 20);
+    rect(0,400,500,100);
+    fill(0,100,0);
+    rect(0,450,500,100);
+
+
+}
+
+void tree(int x, int y, float scale){
+    fill(255);
+    stroke(0);
+    
+    //base of tree
+    noStroke();
+    fill(138, 54, 15);
+    triangle(x, y, x + 25* scale, y + 25* scale, x - 25* scale, y + 25* scale);
+    fill(139, 90, 43);
+    triangle(x, y, x + 50* scale, y + 25* scale, x + 20* scale, y + 25* scale);
+    fill(160, 82, 45);
+    triangle(x, y, x - 50* scale, y + 25* scale, x - 20* scale, y + 25* scale);
+    fill(139, 71, 38);
+    triangle(x, y, x + 25* scale, y - 50* scale, x + 32* scale, y + 15* scale);
+    fill(139, 87, 66);
+    triangle(x, y, x - 25* scale, y - 50* scale, x - 32* scale, y + 15* scale);
+    fill(139, 69, 0);
+    triangle(x, y, x - 25* scale, y - 50* scale, x + 25* scale, y - 50* scale);
+    fill(156, 102, 31);
+    triangle(x, y - 50* scale, x + 20* scale, y - 150* scale, x + 25* scale, y - 50* scale);
+    fill(205, 133, 63);
+    triangle(x, y - 50* scale, x - 20* scale, y - 150* scale, x - 25* scale, y - 50* scale);
+    fill(238, 154, 73);
+    triangle(x, y - 50* scale, x - 20* scale, y - 150* scale, x + 20* scale, y - 150* scale);
+    fill(255, 165, 79);
+    triangle(x, y - 150* scale, x + 15* scale, y - 200* scale, x + 20* scale, y - 150* scale);
+    fill(205, 102, 0);
+    triangle(x, y - 150* scale, x - 15* scale, y - 200* scale, x - 20* scale, y - 150* scale);
+    fill(238, 154, 73);
+    triangle(x, y - 150* scale, x - 15* scale, y - 200* scale, x + 15* scale, y - 200* scale);
+    fill(255, 140, 0);
+    
+    // right branches
+    triangle(x , y - 250* scale, x - 15* scale, y - 200* scale, x + 15* scale, y - 200* scale);
+    fill(237, 145, 33);
+    triangle(x + 10* scale, y - 220* scale, x + 55* scale, y - 240* scale, x + 17* scale, y - 190* scale);
+    fill(238, 118, 0);
+    triangle(x + 25* scale, y - 226* scale, x + 65* scale, y - 280* scale, x + 55* scale, y - 240* scale);
+    fill(238, 154, 73);
+    triangle(x + 40* scale, y - 245* scale, x + 75* scale, y - 350* scale, x + 63* scale, y - 278* scale);
+    fill(255, 165, 79);
+    triangle(x + 75* scale, y - 350* scale, x + 110* scale, y - 400* scale, x + 70* scale, y - 320* scale);
+    fill(205, 133, 0);
+    triangle(x, y - 250* scale, x + 30* scale, y - 280* scale, x + 9* scale, y - 220* scale);
+    fill(255, 165, 0);
+    triangle(x + 15* scale, y - 265* scale, x + 30* scale, y - 360* scale, x + 35* scale* scale, y - 280* scale);
+    fill(184, 134, 11);
+    triangle(x + 25* scale, y - 330* scale, x + 30* scale, y - 360* scale, x + 10* scale, y - 430* scale);
+    fill(255, 185, 15);
+    triangle(x + 55* scale, y - 240* scale, x + 65* scale, y - 280* scale, x + 150* scale, y - 330* scale);
+    fill(205, 149, 12);
+    triangle(x + 150* scale, y - 330* scale, x + 130* scale, y - 318* scale, x + 180* scale, y - 380* scale);
+    fill(238, 207, 161);
+    
+    // left branches 
+    fill(255, 193, 37);
+    triangle(x, y - 250* scale, x - 30* scale, y - 280* scale, x - 9* scale, y - 220* scale);
+    fill(218, 165, 32);
+    triangle(x - 15* scale, y - 265* scale, x - 30* scale, y - 360* scale, x - 35* scale* scale, y - 280* scale);
+    fill(255, 185, 15);
+    triangle(x - 25* scale, y - 330* scale, x - 30* scale, y - 360* scale, x - 10* scale, y - 430* scale);
+    fill(238, 173, 14);
+    triangle(x - 10* scale, y - 220* scale, x - 55* scale, y - 240* scale, x - 17* scale, y - 190* scale);
+    fill(205, 149, 12);
+    triangle(x - 25* scale, y - 226* scale, x - 65* scale, y - 280* scale, x - 55* scale, y - 240* scale);
+    fill(205, 179, 139);
+    triangle(x - 40* scale, y - 245* scale, x - 75* scale, y - 350* scale, x - 63* scale, y - 278* scale);
+    fill(255, 211, 155);
+    triangle(x - 75* scale, y - 350* scale, x - 110* scale, y - 400* scale, x - 70* scale, y - 320* scale);
+    fill(222, 184, 135);
+    triangle(x - 55* scale, y - 240* scale, x - 65* scale, y - 280* scale, x - 150* scale, y - 330* scale);
+    fill(255, 228, 181);
+    triangle(x - 150* scale, y - 330* scale, x - 130* scale, y - 318* scale, x - 180* scale, y - 380* scale);
+    fill(255, 222, 173);
+     
+}
+
+void leaf(int x, int y, float scale){
+    
+    // the leaf
+    fill(255, 153, 0);
+    noStroke();
+    ellipse(x, y, scale * 5, scale * 10);
+    
+    // the stem of the leaf
+    float leafstemX = x;
+    float leafstemY = y + scale * 10;
+    stroke(204, 102, 0);
+    line (x, y, leafstemX, leafstemY);
+    
+    
+}
+
+void draw(){
+    
+    
+    leaf(100, 100, 1.0);
+    leaf(200, 200, 2.0);
+    leaf(150, 100, 1.0);
+    leaf(300, 150, 1.0);
+    leaf(450, 160, 1.0);
+    leaf(250, 100, 1.0);
+    leaf(210, 190, 1.0);
+    leaf(350, 300, 1.0);
+    leaf(180, 200, 1.0);
+    leaf(210, 300, 2.0);
+    leaf(160, 200, 2.0);
+    leaf(180, 300, 2.0);
+    leaf(180, 160, 1.0);
+    leaf(190, 200, 1.0);
+    leaf(460, 500, 1.0);
+    leaf(500, 300, 1.0);
+    leaf(190, 210, 1.0);
+    leaf(250, 400, 1.0);
+    leaf(350, 200, 1.0);
+    leaf(350, 150, 1.0);
+    leaf(int(random(500)), int(random(110,1500)), random(2));
+ 
+    // Trees to the left    
+    tree(250, 100, 0.2);
+    tree(210, 140, 0.3);
+    tree(180, 240, 0.5);
+    tree(140, 320, 0.6);
+    tree(100, 400, 0.7);
+    tree(60, 480, 0.8);
+    
+    // Trees to the right
+    tree(290, 140, 0.3);
+    tree(320, 240, 0.5);
+    tree(360, 320, 0.6);
+    tree(400, 400, 0.7);
+    tree(440, 480, 0.8);
+    
+   
+    fill(0);
+    text("By Jenny Wang", 400, 490);
+    
+}
